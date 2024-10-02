@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-pw44-r(^mwzeg4ho)0j0ld@@=@4&d_e*0f)1akaf%k$&s_yg8w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['adwoapokua.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -119,7 +119,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 # Define directories for Django to look for static files
-STATICFILES_DIRS = [BASE_DIR / "static"]  # If you have a global static folder
+STATICFILES_DIRS = [BASE_DIR / "blog/static"]  # If you have a global static folder
 
 # Optionally, for production, where static files are collected in one place
 STATIC_ROOT = BASE_DIR / "staticfiles"
