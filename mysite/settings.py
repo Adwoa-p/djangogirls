@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['adwoapokua.pythonanywhere.com',
                  'adwoapokua.onrender.com',
+                 '127.0.0.1',
                 ]
 
 
