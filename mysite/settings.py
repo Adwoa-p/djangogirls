@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-pw44-r(^mwzeg4ho)0j0ld@@=@4&d_e*0f)1akaf%k$&s_yg8w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['adwoapokua.pythonanywhere.com',
                  'adwoapokua.onrender.com',
@@ -124,10 +124,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Define directories for Django to look for static files
-STATICFILES_DIRS = [BASE_DIR / "blog/static"]  # If you have a global static folder
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'blog/static'),
+    ]  # If you have a global static folder
 
 # Optionally, for production, where static files are collected in one place
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
