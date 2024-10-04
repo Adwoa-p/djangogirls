@@ -3,8 +3,8 @@ from django.utils import timezone
 from .models import Post
 from .forms import PostForm
 from django.shortcuts import redirect
-from django.http import StreamingHttpResponse
-from wsgiref.util import FileWrapper
+from django.http import FileResponse
+# from wsgiref.util import FileWrapper
 import mimetypes
 import os
 
@@ -16,8 +16,8 @@ def landing(request):
     return render(request, 'blog/landing.html')
 
 def downloadfile(request):
-    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    filename = 'Planssss.pdf'
+    file_path = os.path.join('blog/templates/blog/Aboagye, Adwoa Pokua - CV.pdf')
+    return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='Aboagye, Adwoa Pokua - CV.pdf')
 
 
 def home(request):

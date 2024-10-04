@@ -92,3 +92,14 @@ p {
 .navbar a:hover {
     text-decoration: underline; /* Underline on hover */
 }
+
+img {
+    width: 300px;  /* Set the medium size (adjust as needed) */
+    height: auto;  /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Make the image larger when hovered */
+img:hover {
+    transform: scale(1.2); /* Increase size to 120% */
+}

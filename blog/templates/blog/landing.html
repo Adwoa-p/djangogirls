@@ -12,18 +12,19 @@
         <nav class="navbar">
             <ul>
                 <li>
-                    <a href="{% url 'home' %}">Home</a>
+                    <h3><b><a href="{% url 'home' %}">Home</a></b></h3>
+                    <h3><b><a href="{% url 'post_list' %}">Blog</a></b></h3>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
         <div class="welcome"> 
-            <h1><b>WELCOME TO P-BLOG</b></h1>
+            <p><h1><b>Hi, I'm Adwoa. Here, I code the future, one line at a time.</b></h1><br><img src="{% static 'styles/css/girl.jpeg' %}" alt="girl in glasses"></p>
         </div>
         <div class="container">
             <p>We are all about coding and changing the world using God's word applied in Tech.</p>
-            <a href="blog/templates/blog/Planssss.pdf"><button class="btn">Download CV</button></a>
+            <a href="{% url 'downloadfile' %}"><button class="btn">Download CV</button></a>
         </div>
     </main>
 
