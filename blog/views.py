@@ -3,13 +3,25 @@ from django.utils import timezone
 from .models import Post
 from .forms import PostForm
 from django.shortcuts import redirect
+from django.http import StreamingHttpResponse
+from wsgiref.util import FileWrapper
+import mimetypes
+import os
 
 # Create your views here.
 def post_list(request):
     return render(request,'blog/post_list.html')
 
-# def landing(request):
-#     return render(request, 'blog/landing.html')
+def landing(request):
+    return render(request, 'blog/landing.html')
+
+def downloadfile(request):
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    filename = 'Planssss.pdf'
+
+
+def home(request):
+    return render(request, 'blog/index.html')
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')

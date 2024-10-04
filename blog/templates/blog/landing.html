@@ -5,16 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P blog</title>
-   <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}">
+   <link rel="stylesheet" href="{% static 'styles/css/styles.css' %}">
 </head>
 <body>
+    <header class="header">
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="{% url 'home' %}">Home</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <div class="welcome"> 
             <h1><b>WELCOME TO P-BLOG</b></h1>
         </div>
         <div class="container">
-            <p>Click on the button button below to move to the main page.</p>
-            <a href="{% url 'post_list' %}"><button class="btn">Click here</button></a>
+            <p>We are all about coding and changing the world using God's word applied in Tech.</p>
+            <a href="blog/templates/blog/Planssss.pdf"><button class="btn">Download CV</button></a>
         </div>
     </main>
 
