@@ -1,8 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 .page-header {
     background-color: #6494c4;
     margin-top: 0;
     margin-bottom: 40px;
     padding: 20px 20px 20px 40px;
+    text-align: center;
+    display: flex;            /* Enable flexbox */
+    justify-content: space-between; /* Space between header elements */
+    align-items: center;      /* Center items vertically */
+    padding: 10px;        
 }
 
 .page-header h1,
@@ -12,6 +23,12 @@
     color: #f1aeae;
     font-size: 36pt;
     text-decoration: none;
+}
+
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 h1,
@@ -68,3 +85,11 @@ h4 {
     color: #FFFFFF;
     background-color: #009ec2;
 }
+
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+
