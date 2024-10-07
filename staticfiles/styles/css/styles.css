@@ -90,7 +90,7 @@ p {
 }
 
 .navbar a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;  /*Undeline on hover */
 }
 
 img {
