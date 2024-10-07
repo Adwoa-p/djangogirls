@@ -16,7 +16,7 @@ def landing(request):
     return render(request, 'blog/landing.html')
 
 def downloadfile(request):
-    file_path = os.path.join('blog/templates/blog/Aboagye, Adwoa Pokua - CV.pdf')
+    file_path = os.path.join('blog/static/media/Aboagye, Adwoa Pokua - CV.pdf')
     return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='Aboagye, Adwoa Pokua - CV.pdf')
 
 def home(request):
