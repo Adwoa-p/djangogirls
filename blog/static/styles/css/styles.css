@@ -68,29 +68,32 @@ p {
 
   header {
     background-color: #2a5985;
-    display: flex;            /* Enable flexbox */
-    justify-content: flex-end; /* Space between header elements */
-    align-items: flex-start;      /* Center items vertically */
-    padding: 20px;           /* Add some padding */
-}
-  .navbar ul {
-    list-style-type: none;    /* Remove bullets */
-    padding: 0;               /* Remove padding */
-    margin: 0;                /* Remove margin */
-    display: flex;            /* Use flexbox for horizontal layout */
+    display: flex; 
+    justify-content: flex-end;     
+    align-items: center;     
+        
+    padding: 20px;           
 }
 
-.navbar ul li {
-    margin-left: 20px;       /* Space between links */
+nav ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0;
+    
 }
 
-.navbar a {
-    text-decoration: none;    /* Remove underline */
-    color: rgb(99, 99, 199);             /* Link color */
+nav li {
+    margin: 0 15px; /* Adds space between the list items */
 }
 
-.navbar a:hover {
-    text-decoration: underline;  /*Undeline on hover */
+nav a {
+    text-decoration: none; /* Removes the underline from the links */
+    color: #333; /* Set link color */
+    font-size: 18px; /* Adjusts font size */
+}
+
+nav a:hover {
+    color: #007BFF; /* Changes link color on hover */
 }
 
 img {
@@ -101,5 +104,23 @@ img {
 
 /* Make the image larger when hovered */
 img:hover {
-    transform: scale(1.2); /* Increase size to 120% */
+    transform: scale(1.2); /* Increase size to 120%*/
+
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+
+.section-content {
+    background-color: #203d3b;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 40px;
 }

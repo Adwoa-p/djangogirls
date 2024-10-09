@@ -14,6 +14,7 @@
             <h3><b><a href="{% url 'home' %}">Home</a></b></h3>
             <h3><b><a href="{% url 'about' %}">About</a></b></h3>
             <h3><b><a href="{% url 'post_list' %}">Blog</a></b></h3>
+            <h3><b><a href="#projects">Projects</a></b></h3>
         </nav>
     </header>
     <main>
@@ -25,6 +26,22 @@
             <a href="{% url 'downloadfile' %}"><button class="btn">Download CV</button></a>
         </div>
     </main>
+
+    <section id="projects">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Basic Calculator - Python</h3>
+                <p>A Python calculator that can perform basic operations. Collaborated with my mentor, Zenas Awuku, to enhance its functionalities and push the code to GitHub.</p>
+                <a href="https://github.com/Adwoa-p/basic-calculator">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Django Blog - Web App</h3>
+                <p>Built a blog using Django during a DjangoGirls workshop. This project taught me about Python basics and deploying web apps using platforms like PythonAnywhere.</p>
+                <a href="https://adwoapokua.pythonanywhere.com">View Live Project</a>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
