@@ -11,8 +11,8 @@
 <body>
     <header class="header">
         <nav class="navbar">
-            <h3><b><a href="{% url 'home' %}">Home</a></b></h3>
-            <h3><b><a href="{% url 'about' %}">About</a></b></h3>
+            <h3><b><a href="#home">Home</a></b></h3>
+            <h3><b><a href="#about">About</a></b></h3>
             <h3><b><a href="{% url 'post_list' %}">Blog</a></b></h3>
             <h3><b><a href="#projects">Projects</a></b></h3>
         </nav>
@@ -26,6 +26,32 @@
             <a href="{% url 'downloadfile' %}"><button class="btn">Download CV</button></a>
         </div>
     </main>
+
+    <section id = "home">
+        <div class="section-content">
+            <h4>Welcome to My Site!
+    
+                Hi there! 🌟 I'm Adwoa, a young girl with a big passion for technology. I've just started learning how to code, and I'm excited to share my experiences, projects, and growth with you. Whether you're here to follow along, learn something new, or just curious about coding, you're in the right place! Let's embark on this exciting journey together—one line of code at a time. 💻✨</h4>
+    
+            </div>
+    </section>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>I'm Adwoa, a tech enthusiast who's passionate about learning and coding. I started my coding journey recently, and I'm constantly growing. I love experimenting with different programming languages and technologies.</p>
+        </div>
+    </section>
+
+    {% for post in posts %}
+        <article class="post">
+            <time class="date">
+                {{ post.published_date }}
+            </time>
+            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </article>
+    {% endfor %}
 
     <section id="projects">
         <div class="section-content">
@@ -42,6 +68,12 @@
             </div>
         </div>
     </section>
+    
+    <footer>
+        <div class="footer">
+              
+        </div>
+    </footer>
 
 </body>
 </html>
