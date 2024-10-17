@@ -23,6 +23,11 @@ main{
     height: 100%;
     gap: 20px;  
 }
+h4{ 
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+}
 
 .welcome {
     background-color: #86a8cd;
@@ -37,7 +42,7 @@ main{
 }
 
 p {
-    color: #666;
+    color: #e5dba3;
     font: 1em sans-serif;
     font-size: medium;
 }
@@ -61,7 +66,7 @@ p {
     background: linear-gradient(50deg, #71a77b, #c6e352);
 }
 .btn:active {
-    background-color: #05ff1a;
+    background-color: #006e9d;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
@@ -102,7 +107,7 @@ img {
 
 /* Make the image larger when hovered */
 img:hover {
-    transform: scale(1.2); /* Increase size to 120%*/
+    transform: scale(1.2); /* Increase size to 120% */
 
 }
 
@@ -122,3 +127,18 @@ img:hover {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
+footer{
+    background-color:#6393c3;
+    display: flex; 
+    justify-content: space-around;     
+    align-items: center;        
+    padding: 20px;
+    height: 2vh;
+}
+
+footer a {
+    text-decoration: none;
+    color: #83f8b4; 
+    font-size: 18px; 
+    /* display: flex; */
+}

@@ -13,45 +13,61 @@
         <nav class="navbar">
             <h3><b><a href="#home">Home</a></b></h3>
             <h3><b><a href="#about">About</a></b></h3>
-            <h3><b><a href="{% url 'post_list' %}">Blog</a></b></h3>
+            <h3><b><a href="#blog">Blog</a></b></h3>
             <h3><b><a href="#projects">Projects</a></b></h3>
         </nav>
     </header>
-    <main>
+    <main id = "home">
         <div class="welcome"> 
-            <p><h1><b>Hi, I'm Adwoa. Here, I code the future, one line at a time.</b></h1><br><img src="{% static 'media/girl.jpeg' %}" alt="girl in glasses"></p>
+            <p><h1><b>Welcome to My Site 🌟! <br> <br> Here, I code the future, one line at a time.</b></h1><br><img src="{% static 'media/girl.jpeg' %}" alt="girl in glasses"></p>
         </div>
         <div class="container">
+            <h2>
+                Hi there, I'm Adwoa, a young girl with a big passion for technology. 
+                I've just started learning how to code, and I'm excited to share my experiences, projects, and growth with you.
+                 Whether you're here to follow along, learn something new, or just curious about coding, you're in the right place! 
+                 Let's embark on this exciting journey together—one line of code at a time. 💻✨
+            </h2>
             <p>We are all about coding and changing the world using God's word applied in Tech.</p>
             <a href="{% url 'downloadfile' %}"><button class="btn">Download CV</button></a>
         </div>
     </main>
 
-    <section id = "home">
-        <div class="section-content">
-            <h4>Welcome to My Site!
-    
-                Hi there! 🌟 I'm Adwoa, a young girl with a big passion for technology. I've just started learning how to code, and I'm excited to share my experiences, projects, and growth with you. Whether you're here to follow along, learn something new, or just curious about coding, you're in the right place! Let's embark on this exciting journey together—one line of code at a time. 💻✨</h4>
-    
-            </div>
-    </section>
-
     <section id="about">
         <div class="section-content">
-            <h2>About Me</h2>
-            <p>I'm Adwoa, a tech enthusiast who's passionate about learning and coding. I started my coding journey recently, and I'm constantly growing. I love experimenting with different programming languages and technologies.</p>
+            <h1>What I do</h1>
+            <p>
+                <h2>General Stuff</h2>
+                I'm Adwoa, a tech enthusiast who's passionate about learning and coding. 
+                <br> I started my coding journey recently, and I'm constantly growing. 
+                <br> I love experimenting with different programming languages and technologies.
+            </p>
+
+            <p>
+                <h3>Web Development</h3>
+                I can develop websites using HTML, CSS, Flask, Django, & SQLAlchemy
+            </p>
         </div>
     </section>
 
-    {% for post in posts %}
-        <article class="post">
-            <time class="date">
-                {{ post.published_date }}
-            </time>
-            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-            <p>{{ post.text|linebreaksbr }}</p>
-        </article>
-    {% endfor %}
+    <section id = "blog">
+        <div class="section-content">
+            <h1>This a list of blog posts</h1>
+            {% for post in posts %}
+            <article class="post">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.text|truncatechars:100|linebreaksbr}}</p>
+                <a href="{% url 'post_detail' pk=post.pk %}">View more</a>
+            </article>
+            {% endfor %}
+
+            <!-- {% if posts %}
+                <p>Posts are being passed to this template</p>
+            {% else %}
+                <p>No posts found.</p>
+            {% endif %} -->
+        </div>
+    </section>
 
     <section id="projects">
         <div class="section-content">
@@ -70,8 +86,12 @@
     </section>
     
     <footer>
-        <div class="footer">
+        <div class="navbar">
+            <p> Contact me </p> <br>
               
+                <a href="https://github.com/Adwoa-p/">Github</a>
+                <a href="https://www.linkedin.com/in/adwoa-pokua-aboagye-a22293298/">LinkedIn</a>
+            
         </div>
     </footer>
 

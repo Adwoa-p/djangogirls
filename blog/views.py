@@ -13,21 +13,12 @@ def post_list(request):
     return render(request,'blog/post_list.html')
 
 def landing(request):
-    return render(request, 'blog/landing.html')
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/landing.html', {'posts': posts})
 
 def downloadfile(request):
     file_path = os.path.join('blog/static/media/Aboagye, Adwoa Pokua - CV.pdf')
     return FileResponse(open(file_path, 'rb'), as_attachment=True, filename='Aboagye, Adwoa Pokua - CV.pdf')
-
-def home(request):
-    return render(request, 'blog/index.html')
-
-def about(request):
-    return render(request, 'blog/about.html')
-
-def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'blog/post_list.html', {'posts': posts})
 
 def post_detail(request,pk):
     post = get_object_or_404(Post, pk=pk)
