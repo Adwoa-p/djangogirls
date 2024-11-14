@@ -14,7 +14,7 @@ def post_list(request):
 
 def landing(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'blog/landing.html', {'posts': posts})
+    return render(request, 'blog/index.html', {'posts': posts})
 
 def downloadfile(request):
     file_path = os.path.join('blog/static/media/Aboagye, Adwoa Pokua - CV.pdf')

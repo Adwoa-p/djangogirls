@@ -1,5 +1,123 @@
-{% extends 'blog/base.html' %}
+{% load static %}
 
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P blog</title>
+   <link rel="stylesheet" type="text/css" href="{% static 'styles/css/styles.css' %}">
+   <link rel="stylesheet" type="text/css" href="{% static 'styles/css/mediaqueries.css' %}">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="navdiv">
+                <div class="name"> Adwoa </div>
+                <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#projects">Projects</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container" id = "home">
+        <div class="col col1">
+            <p><h1><b>Welcome to My Site 🌟! <br> Here, I code the future, one line at a time.</b></h1></p>
+            <p>We are all about coding and changing the world using God's word applied in Tech.</p>
+            <a href="{% url 'downloadfile' %}"><button class="btn">Download CV</button></a>
+        </div>
+        <div class="col">
+            <img src="{% static 'media/girl.jpeg' %}" alt="girl in glasses">
+        </div>
+    </main>
+
+    <section id="about">
+        <div class="about-content">
+            <div class="htitle">About me</div>
+            <div class="sec1">
+                <div class="about1">
+                    <img src="{% static 'media/moi.jpg' %}" alt="moi">
+                </div>
+                <div class="sec2">
+                    <div class="about2">
+                        <p>
+                        Hi there, I'm Adwoa, a young girl with a big passion for technology. 
+                        I've just started learning how to code, and I'm excited to share my experiences, projects, and growth with you.
+                        Whether you're here to follow along, learn something new, or just curious about coding, you're in the right place! 
+                        Let's embark on this exciting journey together—one line of code at a time. 💻✨
+                        </p>
+                    </div>
+                    <div class="about3">
+                        <fieldset>
+                            <legend>  General stuff </legend>
+                            Name: Adwoa Aboagye         <br><br>    Age: 19 <br><br>
+
+                            School: University of Ghana   <br><br>  Email: aboagyeadwoapokua@gmail.com <br><br>
+                            
+                            Skills: HTML, CSS, Python, Django and Java
+                            <br>
+                            <br>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id = "blog">
+        <div id= "Blogcontent">
+            <div class="heading">
+                <h1>Blog posts</h1>
+            </div>
+            <div  class="post">
+            {% for post in posts %}
+            <article>
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.text|truncatechars:289|linebreaksbr}}</p>
+                <a href="{% url 'post_detail' pk=post.pk %}">View more</a>
+            </article>
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div>
+            <div class="heading">
+                <h2>Projects</h2>
+            </div>
+            <div class="project">
+                <div class="hproject">
+                    <h3>Basic Calculator - Python</h3> <br>
+                    <p>A Python calculator that can perform basic operations. Collaborated with my mentor, Zenas Awuku, to enhance its functionalities and push the code to GitHub.</p>
+                    <a href="https://github.com/Adwoa-p/basic-calculator">View Project</a>
+                </div>
+                <div class="hproject">
+                    <h3>Django Blog - Web App</h3> <br>
+                    <p>Built a blog using Django during a DjangoGirls workshop. This project taught me about Python basics and deploying web apps using platforms like PythonAnywhere.</p>
+                    <a href="https://adwoapokua.pythonanywhere.com">View Live Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
     
-{% endblock %}
+    <footer>
+        <div class="footer">
+            <p> Reach out to me on any of these socials </p> <br>
+            <div class="socialIcons">
+                <a href="https://github.com/Adwoa-p/"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/adwoa-pokua-aboagye-a22293298/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="bottom"> 
+            <p> Copyright &copy;2024</p>
+        </div>
+    </footer>
+
+</body>
+</html>
