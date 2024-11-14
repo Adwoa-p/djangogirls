@@ -1,0 +1,80 @@
+@media screen and (max-width: 375px){
+    
+    
+    h4{ 
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    p {
+        color: #f0eddd;
+        font: 0.55em sans-serif;
+        font-size: small;
+    }
+    
+    .name{
+        font-size: 25px;
+        color: #edbcbc
+    }
+    
+    li a {
+        color: #adc6e7; 
+        font-size: 10px; 
+    }
+    
+    li a:hover {
+        color: #152d46; 
+    }
+    
+    .menu-icons{
+        width: 30px;
+        cursor: pointer;
+    }
+    
+    img {
+        width: 300px;  
+        height: 250px;
+    }
+    
+    .htitle{
+        color: #232825;
+        font-weight: bolder;
+        font-size: large;
+    }
+    
+    .about-content img{
+        width: 250px;  
+        height: 00px;
+    }
+  
+    .about3{
+        height: 100px;
+
+    }
+    
+    .heading{
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+        font-size: small;
+    }
+    
+    .post{
+        width: 180px;
+        height: 170px;
+    }
+    
+    .hproject{
+        width: 150px;
+        height: 200px;
+    }
+    
+    .footer p{
+        color: #252b28;
+        font-size: small;
+    }
+    
+    .socialIcons a i{
+        font-size: 1em;
+    }
+    
+}
