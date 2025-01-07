@@ -55,34 +55,39 @@ p {
   }
 
 .navbar {
-    background-color:  #1F2937;
-    font-weight: bold;        
-    padding-right: 30px;
-    padding-left: 30px;
-    height: 7vh; 
-    margin: 0;  
-    padding: 0;     
+    padding: 20px 8%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+       
 }
 
 .name{
+    font-weight: bold; 
     font-size: 35px;
     color: #6f89ce;
     font-family: Arial, Helvetica, sans-serif;
     padding-left: 3%;
 }
-
+/* 
 .navdiv{
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+} */
 
-li{
+.navbar ul li{
     list-style: none;
     display: inline-block;
+    margin-left: 40px;
+
 }
 
-li a {
+.navbar li a {
     text-decoration: none;
     color: #D1D5DB; 
     font-size: 20px; 
@@ -90,7 +95,7 @@ li a {
     margin-right: 25px;
 }
 
-li a:hover {
+.navbar li a:hover {
     color: #60A5FA; 
 }
 
@@ -109,11 +114,19 @@ li a:hover {
 .col1{
     flex-direction: column;
     padding-left: 100px;
+    color: #fff;
+    margin-top: 200px;
+    text-align: center  ;
 }
 
 .col1 h1{
-    color: #303135 ;
+    font-size: 95px;
+    margin-bottom: 10px;
 }
+.col1 p{
+    font-size: 35px;
+}
+
 
 .bio{
     color: #4150afd0;
