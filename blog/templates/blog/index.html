@@ -9,9 +9,17 @@
    <link rel="stylesheet" type="text/css" href="{% static 'styles/css/styles.css' %}">
    <link rel="stylesheet" type="text/css" href="{% static 'styles/css/mediaqueries.css' %}">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <style>
+    .container{
+        background-image: url("{% static 'media/background_home.jpg' %}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+</style>
 </head>
 <body>
-    <header class="header">
+    <header class="header"  >
         <nav class="navbar">
             <div class="navdiv">
                 <div class="name"> Adwoa </div>
@@ -28,12 +36,12 @@
     <main class="container" id = "home">
         <div class="col col1">
             <p><h1><b>Welcome to My Site 🌟! <br> Here, I code the future, one line at a time.</b></h1></p>
-            <p>We are all about coding and changing the world using God's word applied in Tech.</p>
+            <p class="bio">We are all about coding and changing the world using God's word applied in Tech.</p>
             <a href="{% url 'downloadfile' %}"><button class="btn">Download CV</button></a>
         </div>
-        <div class="col">
+        <!-- <div class="col">
             <img src="{% static 'media/girl.jpeg' %}" alt="girl in glasses">
-        </div>
+        </div> -->
     </main>
 
     <section id="about">
