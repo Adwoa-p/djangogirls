@@ -30,7 +30,7 @@ p {
 }
 
 .btn {
-    background: linear-gradient(90deg, #86a8cd, #00bfae);
+    background: linear-gradient(50deg, #9fb1a3, #6b97de);
     border: none;
     color: white;
     padding: 15px 32px;
@@ -45,7 +45,7 @@ p {
 }
 
 .btn:hover {
-    background: linear-gradient(50deg, #9fb1a3, #6b97de);
+    background: linear-gradient(90deg, #86a8cd, #00bfae);
 }
 
 .btn:active {
@@ -55,7 +55,6 @@ p {
   }
 
 .navbar {
-    padding: 20px 8%;
     width: 100%;
     position: absolute;
     top: 0;
@@ -69,9 +68,10 @@ p {
 .name{
     font-weight: bold; 
     font-size: 35px;
-    color: #6f89ce;
+    color: #abb0b8; 
     font-family: Arial, Helvetica, sans-serif;
-    padding-left: 3%;
+    padding-left: 2%;
+    padding-top: 1%;
 }
 /* 
 .navdiv{
@@ -89,7 +89,7 @@ p {
 
 .navbar li a {
     text-decoration: none;
-    color: #D1D5DB; 
+    color: #abb0b8; 
     font-size: 20px; 
     font-family:Arial, Helvetica, sans-serif ;
     margin-right: 25px;
@@ -115,16 +115,18 @@ p {
     flex-direction: column;
     padding-left: 100px;
     color: #fff;
-    margin-top: 200px;
+    margin-top: 100px;
     text-align: center  ;
 }
 
 .col1 h1{
-    font-size: 95px;
+    font-size: 50px;
     margin-bottom: 10px;
 }
 .col1 p{
-    font-size: 35px;
+    font-size: 20px;
+    color: #fff;
+    
 }
 
 
