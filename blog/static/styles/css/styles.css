@@ -144,7 +144,7 @@ img {
 }
 
 .about-content {
-    background-color: #86a8cd;
+    background-color: #191b1c;
     width: 100vw; 
     height: 100vh; 
     gap: 70px;
@@ -161,18 +161,19 @@ img {
 }
 
 .htitle{
-    color: #1f2321;
     font-weight: bolder;
-    font-size: xx-large;
-    font-family: 'Times New Roman', Times, serif;
     display: flex;
     justify-content: center;
-    padding: 10px;
+    font-size: 45px;
+    color: #abb0b8; 
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 10%;
+    padding-top: 5%;
 }
 
 .about-content img{
     width: 100%;  
-    height: auto;
+    height: 50%;
     max-width: 400px;
     padding:0;
     /* box-sizing: border-box; */
@@ -188,11 +189,6 @@ img {
     padding-right: 50px ;
 }
 
-.about3{
-    height: 200px;
-    
-   
-}
 
 #Blogcontent{
     background-color:  rgb(176, 201, 235);
